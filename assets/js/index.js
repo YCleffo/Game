@@ -473,7 +473,7 @@ function collision() {
 
             // Условие коллизии и действия при нем
 
-            if (Math.abs(point1[0]) < (map[i][6] + 90) / 2 && Math.abs(point1[1]) < (map[i][7] + 90) / 2 && Math.abs(point1[2]) < 90) {
+            if (Math.abs(point1[0]) < (map[i][6] + 98) / 2 && Math.abs(point1[1]) < (map[i][7] + 98) / 2 && Math.abs(point1[2]) < 90) {
                 point1[2] = Math.sign(point0[2]) * 90;
                 let point2 = coorReTransform(point1[0], point1[1], point1[2], map[i][3], map[i][4], map[i][5]);
                 let point3 = coorReTransform(point1[0], point1[1], 0, map[i][3], map[i][4], map[i][5]);
