@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/fav.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/background.css">
+    <title>My Game</title>
+</head>
+
+<body>
+    <canvas id="canvas_snow"></canvas>
+    <audio src="assets/library/Alan_Galit_Buddha.mp3" id="myAudio" autoplay loop></audio>
+    <a onClick="togglePlay()" class="soundBtn"><img src="assets/img/sound.svg" alt="sound"></a>
+    <div id="container">
+        <div id="world">
+        </div>
+        <div id="pawn"></div>
+        <div class="widget" id="widget1"></div>
+        <div class="widget" id="widget2"></div>
+        <div class="widget" id="widget3"></div>
+        <div class="menu" id="menu1" style="display:block;">
+            <video class="video_menu" src="assets/img/move1.mp4" autoplay muted loop></video>
+            <div id="button1" class="button">
+                <p>Начать игру</p>
+            </div>
+            <div id="button2" class="button">
+                <p>Правила</p>
+            </div>
+        </div>
+        <div class="menu" id="menu2">
+
+            <p style="font-size:30px; top:240px; ">
+                <strong>Управление:</strong> <br> w - вперед <br> s - назад <br> d - вправо <br> a - влево <br> пробел - прыжок <br>Включите английскую раскладку<br>
+                <strong>Задача:</strong> <br> Взять красный квадрат и найти голубой квадрат
+            </p>
+            <video class="video_menu" src="assets/img/move1.mp4" autoplay muted loop></video>
+            <div id="button3" class="button">
+                <p>Назад</p>
+            </div>
+        </div>
+        <div class="menu" id="menu3">
+            <video class="video_menu" src="assets/img/move1.mp4" autoplay muted loop></video>
+            <p id="result"></p>
+            <div id="button4" class="button">
+                <p style="text-align: center;">Вернуться назад</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/background.js"></script>
