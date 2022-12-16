@@ -5,7 +5,11 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: 'Correct';
-    background-color: rgb(116, 114, 224);
+    /* background-color: rgb(116, 114, 224); */
+    --x: calc(var(--posX, 0) * 1px);
+    --y: calc(var(--posY, 0) * 1px);
+    background-image: linear-gradient(90deg, rgb(120, 114, 245) 0%, rgb(58, 58, 146) 0%, rgb(117, 117, 182) 100%), radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(92, 58, 146), rgb(155, 55, 158)), radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(146, 38, 31), rgb(141, 42, 42)), radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(58, 58, 146), rgb(58, 58, 146)), radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(58, 58, 146), rgb(58, 96, 146)), linear-gradient(90deg, rgb(43, 38, 133) 0%, rgb(58, 58, 146) 0%, rgb(58, 58, 146) 100%);
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
 }
 
 @font-face {
@@ -105,15 +109,15 @@ p {
 }
 
 #button1 {
-    top: 140px;
+    top: 300px;
     left: 150px;
 }
 
 #button2 {
-    top: 500px;
-    left: 300px;
-    width: 600px;
-    height: 190px;
+    bottom: 50px;
+    left: 350px;
+    width: 500px;
+    height: 130px;
 }
 
 #button3 {
