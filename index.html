@@ -28,11 +28,10 @@
                 <p>Начать игру</p>
             </div>
             <div id="button2" class="button">
-                <p>Правила</p>
+                <p>Управление</p>
             </div>
         </div>
         <div class="menu" id="menu2">
-
             <p style="font-size:30px; top:240px; ">
                 <strong>Управление:</strong> <br> w - вперед <br> s - назад <br> d - вправо <br> a - влево <br> пробел - прыжок <br>Включите английскую раскладку<br>
                 <strong>Задача:</strong> <br> Взять красный квадрат и найти голубой квадрат
@@ -46,11 +45,28 @@
             <video class="video_menu" src="assets/img/move1.mp4" autoplay muted loop></video>
             <p id="result"></p>
             <div id="button4" class="button">
-                <p style="text-align: center;">Вернуться назад</p>
+                <p style="text-align: center;">Главная</p>
             </div>
         </div>
     </div>
 </body>
+<script>
+    document.body.addEventListener("pointermove", (e) => {
+        const {
+            currentTarget: el,
+            clientX: x,
+            clientY: y
+        } = e;
+        const {
+            top: t,
+            left: l,
+            width: w,
+            height: h
+        } = el.getBoundingClientRect();
+        el.style.setProperty('--posX', x - l - w / 2);
+        el.style.setProperty('--posY', y - t - h / 2);
+    })
+</script>
 
 </html>
 <script src="assets/js/index.js"></script>
